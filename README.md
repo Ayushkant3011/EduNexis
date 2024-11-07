@@ -1,31 +1,87 @@
-# React & Tailwind CSS Starter Pack
+# EduNexis Project 
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+EduNexis is a secure, role-based EdTech platform built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows students to purchase and access courses, while instructors can create and manage course content. The platform includes secure authentication, e-commerce functionality, and a modular architecture with role-based access control.
 
-## Usage
+## Features
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+- **Role-Based Access**: Supports three user roles - Students, Instructors, and Admins.
+- **Authentication & Authorization**: Secure login and access control using JWT tokens, cookies, and bcrypt password encryption.
+- **Payment Integration**: Razorpay API integration for processing course purchases.
+- **RESTful API**: Efficient data management for course and student information with organized routes and scalable API endpoints.
+
+
+## Tech Stack
+
+- **Frontend**: React, HTML, CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Payment Gateway**: Razorpay API
+- **Authentication & Security**: JWT, Cookies, bcrypt
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- Razorpay account for API credentials.
+
+
+### Installation
 
 1. Clone the repository to your local machine.
     ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
+    git clone https://github.com/Ayushkant3011/EduNexis.git
     ```
 
-1. Install the required packages.
+2. Install the required packages.
     ```sh
-    cd react-tailwind-css-starter-pack
+    cd EduNexis
     npm install
     ```
 
-1. Start the development server.
+3. Set up environment variables:
+   - Create a `.env` file in the root directory with the following:
+     ```
+     MONGO_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret
+     RAZORPAY_KEY_ID=your_razorpay_key_id
+     RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+     ```
+4. Start the development server.
     ```sh
     npm start
     ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+## Usage
 
-## Contributing
+- **Student**: Can browse and purchase courses, access enrolled content.
+- **Instructor**: Can create and manage courses, set course categories.
+- **Admin**: Oversees platform operations and manages users.
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+
+## Project Structure
+
+```
+EduNexis/
+├── client/               # Frontend (React)
+├── config/               # Environment configuration
+├── controllers/          # API request controllers
+├── middleware/           # Middleware (authentication, etc.)
+├── models/               # Database models (User, Course)
+├── routes/               # API routes
+├── utils/                # Utility functions
+└── .env                  # Environment variables
+```
+
+
+
+
+
+Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
+
+
+
+
+## Contact
+
+For questions or feedback, please reach out at [ayushkant17@gmail.com](mailto:ayushkant17@gmail.com).
